@@ -73,7 +73,7 @@ cor.test(data$x,data$y) #The sample estimate cor is the pearsons correlation coe
 model<-lm(y~x,data=data)# predict y from x
 summary(model) #(Intercept) is the predicted value of y when all the predictors are 0
 #linear regression assumes:
-	#y is "quantitative and on an interval scale", esentially y is a number
+	#y is "quantitative and on an interval scale", essentially y is a number
 	#a linear relationship
 	#normailty of the y value for all combinations of the predictors. check this with a qqplot and plots of the residuals and histogram of the residuals 
 	plot(model)
@@ -95,7 +95,7 @@ anova(model,nullmodel) #If there is only one predictor you dont have to create a
 
 #deletion testing for multiple linear regression
 model<-lm(y~x+z*w)#there is an interaction between z and w
-drop1(model, test="Chisq")# drops each predictor seperately and tests if the reduced model is significantly worse. test can be "Chisq" or "F"
+drop1(model, test="Chisq")# drops each predictor separately and tests if the reduced model is significantly worse. test can be "Chisq" or "F"
 
 #remember that if the interaction is important (ie its drop1 is significant) you cannot remove either of the terms it is made of
 

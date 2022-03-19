@@ -72,13 +72,13 @@ names(iris)<-c("sl","sw","pl","pw","Species","slF")
 names(iris)[5]<-"species"
 
 #plot species against sepal length
-#remmeber to use your new column names, use str() to look them up
+#remmber to use your new column names, use str() to look them up
 plot(iris$species,iris$sl)
 
 
 #Compare dataframes
 #give you plants id numbers in a new column
-#two numbers seperated by a colon creates a sequence between those numbers
+#two numbers separated by a colon creates a sequence between those numbers
 iris$plantid<-1:150
 
 #imagine you're given a second list
@@ -89,7 +89,7 @@ slugs<-54:83
 iris$slug<-FALSE
 #match tells you if and where each item in the first list
 #occurs in the second list
-#it only returns the first occurance though!
+#it only returns the first occurrence though!
 match(slugs,iris$plantid)
 
 iris[match(slugs,iris$plantid),]
@@ -109,7 +109,7 @@ plot(iris$species,iris$slug)
 
 #return the first row of the ChickWeight data
 
-#calculate the average weigth for each diet seperately
+#calculate the average weight for each diet separately
 
 #create a new column called group and set it to "M" for all chicks
 
@@ -117,5 +117,5 @@ plot(iris$species,iris$slug)
 #the average for diet 4
 
 
-#please send any feed back, topic suggestions for future R workshops or questions
-#to me: d.a.wells@2016.ljmu.ac.uk
+#please send any feed back, topic suggestions for future R workshops
+# or questions to me

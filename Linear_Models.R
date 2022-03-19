@@ -41,7 +41,7 @@ plot(E,iris$Petal.Length-pred)
 #Double check the assumption of normality with the residuals
 hist(E)
 
-#plot the residuals against the predicted values and each explanitory vairable in turn
+#plot the residuals against the predicted values and each explanatory variable in turn
 plot(pred,E)
 plot(iris$Petal.Width,E)
 plot(iris$Species,E)
@@ -91,7 +91,7 @@ msleen$vore<-relevel(msleen$vore,ref="omni")
 #Checking the distribution is a good start but the residuals must also be checked
 hist(msleen$sleep_total)
 
-#Plot each of the explanitory variables against the response variable in turn
+#Plot each of the explanatory variables against the response variable in turn
 #Check for a linear relation, equal variance and outliers
 plot(msleen$bodywt,msleen$sleep_total)
 plot(log(msleen$bodywt),msleen$sleep_total)
@@ -122,7 +122,7 @@ vif(s2) #VIF scores above 2 are a little troubling, over 5 is a big problem
 plot(log(msleen$bodywt),log(msleen$brainwt))
 #They are highly colinear which can cause problems
 
-#Colinearity means the model struggles to corectly partition the variance between the colinear terms.
+#Colinearity means the model struggles to correctly partition the variance between the colinear terms.
 #In short, it cannot tell which is important bodywt or brainwt
 #We have to pick one to remove based on our knowledge of the system 
 s3<-lm(sleep_total~log(brainwt)+vore,data=msleen)
@@ -138,4 +138,4 @@ summary(s3)
 
 ##################
 
-#Please send any questions or feedback to d.a.wells@2016.ljmu.ac.uk
+#Please send me any questions or feedback
